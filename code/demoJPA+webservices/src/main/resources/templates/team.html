@@ -1,0 +1,16 @@
+<form th:action="@{/team}" th:object="${team}" method="post">
+
+    <h1>Create Team</h1>
+    <div="form-row">
+    <div>
+        <label>Name</label>
+        <input type="text" th:field="*{name}">
+    </div>
+    <div>
+        <label>image</label>
+        <input type="url" th:field="*{image}">
+    </div>
+
+    <button type="submit">Create</button>
+    </div>
+</form>

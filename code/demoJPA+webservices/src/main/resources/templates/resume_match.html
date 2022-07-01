@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Match Resume</title>
+</head>
+<body>
+    <h1>Match Resume</h1>
+    <form action="#" th:action="@{resume_match(id=${match.id})}" th:object="${resume}" method="post">
+        <p>
+            <p>Minute of the match:
+                <input type="datetime-local" th:field="*{time}" />
+            </p>
+            <br>
+            <input type="submit" value="Resume" />
+        </p>
+    </form>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Match Events </title>
+    <meta charset="utf8" />
+</head>
+    <body>
+
+        <h1>Match Events</h1>
+        <div="form-row">
+            <td><a th:href="@{start_match(id=${match.id})}">Set start of the match<br></a></td>
+            <td><a th:href="@{end_match(id=${match.id})}">Set end of the match<br></a></td>
+            <td><a th:href="@{goal_match(id=${match.id})}">Set a goal<br></a></td>
+            <td><a th:href="@{yellow_match(id=${match.id})}">Set a yellow card<br></a></td>
+            <td><a th:href="@{red_match(id=${match.id})}">Set a red card<br></a></td>
+            <td><a th:href="@{interrupt_match(id=${match.id})}">Set an interruption<br></a></td>
+            <td><a th:href="@{resume_match(id=${match.id})}">Set the resume of the match<br></a></td>
+        </div>
+
+    </body>
+</html>

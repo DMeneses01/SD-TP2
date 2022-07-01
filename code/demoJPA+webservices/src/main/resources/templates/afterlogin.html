@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>ScoreDEI</title>
+    <meta charset="utf8" />
+      <meta http-equiv="refresh" content="20">
+  </head>
+  <body>
+
+    <h1>ScoreDEI</h1>
+
+    <h2>Regist Match Events</h2>
+
+    <a
+       th:each="m : ${allmatches}"
+       th:href="@{/match_events(id=${m.id})}">
+        <span
+          th:text="${m}">
+        </span>
+        <br>
+    </a>
+
+    <h2>Follow Matches</h2>
+
+    <a
+            th:each="m : ${matches}"
+            th:href="@{/match_inside(id=${m.id})}">
+        <span
+                th:text="${m}">
+        </span>
+      <br>
+    </a>
+
+    <h2>Stats</h2>
+
+    <div="form-row">
+    <td><a th:href="@{champ_table}">Championship Table<br></a></td>
+    <td><a th:href="@{best_scorer}">Best scorer<br></a></td>
+    </div>
+
+  </body>
+</html>

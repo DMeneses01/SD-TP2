@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Match Interruption</title>
+</head>
+<body>
+    <h1>Match Interruption</h1>
+    <form action="#" th:action="@{interrupt_match(id=${match.id})}" th:object="${interrupt}" method="post">
+        <p>
+            <p>Minute of the match:
+                <input type="datetime-local" th:field="*{time}" />
+            </p>
+            <br>
+            <input type="submit" value="Interruption" />
+        </p>
+    </form>
+</body>
+</html>

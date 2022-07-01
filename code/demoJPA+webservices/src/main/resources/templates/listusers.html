@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>List of Users</title>
+  <meta charset="utf8"/>
+</head>
+<body>
+<h1>List of Users</h1>
+
+<table border="1">
+  <tr>
+    <th>NAME</th>
+    <th>EMAIL</th>
+    <th>TELEPHONE</th>
+    <th>CHANGE</th>
+    <th>DELETE</th>
+  </tr>
+  <tr th:each="u : ${user}">
+    <td th:text="${u.name}"></td>
+    <td th:text="${u.email}"></td>
+    <td th:text="${u.telephone}"></td>
+    <td><a th:href="@{edituser(email=${u.email})}">here</a></td>
+    <td><a th:href="@{deleteuser(email=${u.email})}">delete</a></td>
+  </tr>
+</table>
+
+<div="form-row">
+<td><a th:href="@{admin}">Back<br></a></td>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,18 @@
+<form th:action="@{/savematch}" th:object="${match}" method="post">
+    <div="form-row">
+    <div>
+        <input type="hidden" th:field="*{id}">
+    </div>
+    <div>
+        <label>Location</label>
+        <input type="text" th:field="*{location}">
+    </div>
+    <div>
+        <label>Date</label>
+        <input type="datetime-local" th:field="*{datetime}">
+    </div>
+
+    </div>
+        <button type="submit">Edit Match</button>
+    </div>
+</form>

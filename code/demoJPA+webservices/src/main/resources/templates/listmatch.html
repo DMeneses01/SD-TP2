@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>List of Matches</title>
+  <meta charset="utf8"/>
+</head>
+<body>
+<h1>List of Matches</h1>
+
+<table border="1">
+  <tr>
+    <th>MATCH</th>
+    <th>LOCATION</th>
+    <th>DATE</th>
+    <th>CHANGE</th>
+    <th>DELETE</th>
+  </tr>
+  <tr th:each="m : ${match}">
+    <td th:text="${m}"></td>
+    <td th:text="${m.location}"></td>
+    <td th:text="${m.date}"></td>
+    <td><a th:href="@{editmatch(id=${m.id})}">here</a></td>
+    <td><a th:href="@{deletematch(id=${m.id})}">delete</a></td>
+
+  </tr>
+</table>
+
+<div="form-row">
+<td><a th:href="@{admin}">Back<br></a></td>
+</div>
+
+</body>
+</html>

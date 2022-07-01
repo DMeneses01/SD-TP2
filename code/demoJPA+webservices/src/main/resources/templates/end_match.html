@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>End of the Match</title>
+</head>
+<body>
+<h1>End of the match</h1>
+
+<form action="#" th:action="@{/end_match}" th:object="${matchf}" method="post">
+    <div>
+        <input type="hidden" th:field="*{id}">
+    </div>
+    <div>
+        <label>Day - Hour</label>
+        <input type="datetime-local" th:field="*{time}">
+    </div>
+    <p>
+        <label>Are you sure you want to set the end of the match?</label>
+        <br>
+        <input type="submit" value="End Match" />
+    </p>
+</form>
+</body>
+</html>

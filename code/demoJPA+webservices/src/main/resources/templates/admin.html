@@ -1,0 +1,51 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>ScoreDEI </title>
+        <meta charset="utf8" />
+        <meta http-equiv="refresh" content="20">
+    </head>
+    <body>
+
+        <h1>Admin Pannel</h1>
+        <h2>Admin functionalities </h2>
+        <div="form-row">
+            <td><a th:href="@{team}">Create Team<br></a></td>
+            <td><a th:href="@{player}">Create Player<br></a></td>
+            <td><a th:href="@{match}">Create Match<br></a></td>
+            <td><a th:href="@{register}">Regist User<br></a></td>
+            <td><a th:href="@{listteam}">Edit Team<br></a></td>
+            <td><a th:href="@{listplayer}">Edit Player<br></a></td>
+            <td><a th:href="@{listusers}">Edit User<br></a></td>
+            <td><a th:href="@{listmatch}">Edit Match<br></a></td>
+        </div>
+
+        <h2>Regist Match Events</h2>
+        <a
+                th:each="m : ${allmatches}"
+                th:href="@{/match_events(id=${m.id})}">
+        <span
+                th:text="${m}">
+        </span>
+            <br>
+        </a>
+
+        <h2>Follow Matches</h2>
+        <a
+                th:each="m : ${matches}"
+                th:href="@{/match_inside(id=${m.id})}">
+        <span
+                th:text="${m}">
+        </span>
+            <br>
+        </a>
+
+        <h2>Stats</h2>
+
+        <div="form-row">
+            <td><a th:href="@{champ_table}">Championship Table<br></a></td>
+            <td><a th:href="@{best_scorer}">Best scorer<br></a></td>
+        </div>
+
+    </body>
+</html>

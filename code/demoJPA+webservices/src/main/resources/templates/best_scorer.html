@@ -1,0 +1,18 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>ScoreDEI </title>
+        <meta charset="utf8" />
+        <meta http-equiv="refresh" content="20">
+    </head>
+    <body>
+
+        <h1>Best Scorer</h1>
+
+        <label>Player: </label>
+        <span
+                th:text="${Player.name} + ' ['+ ${Player.t.name} + '] : ' + ${nGoals} + ' Goals'">
+        </span>
+        <br>
+    </body>
+</html>

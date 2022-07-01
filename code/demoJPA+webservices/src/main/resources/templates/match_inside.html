@@ -1,0 +1,49 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Match Events </title>
+    <meta charset="utf8" />
+    <meta http-equiv="refresh" content="20">
+</head>
+    <body>
+
+        <h1>Match Arena</h1>
+        <label>Match: </label>
+        <span
+                th:text="${match}">
+        </span>
+        <br>
+        <label>Result: </label>
+        <span
+                th:text="${result}">
+        </span>
+        <br>
+        <label>Duration: </label>
+        <span
+                th:text="${match_time}">
+        </span>
+        <br>
+        <label>Location: </label>
+        <span
+                th:text="${match.getLocation()}">
+        </span>
+        <br>
+        <label>Date: </label>
+        <span
+                th:text="${match.getDate()}">
+        </span>
+        <br>
+
+        <h2>Events</h2>
+        <label>START - </label>
+        <span
+            th:text="${match.getStart_time()}">
+        </span>
+        <div
+                th:each="e : ${events}">
+            <span
+                    th:text="${e}">
+            </span>
+        </div>
+    </body>
+</html>

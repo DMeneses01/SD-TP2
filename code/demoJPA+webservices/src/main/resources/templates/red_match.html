@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Red Card</title>
+</head>
+<body>
+    <h1>Red Card</h1>
+    <form action="#" th:action="@{red_match(id=${match.id})}" th:object="${red}" method="post">
+        <p>
+            <label>Player</label>
+            <select class="form-control" th:field="*{player}">
+                <option th:each="p : ${players}"
+                        th:value="${p.id}"
+                        th:text="${p.name} + ' - '+ ${p.t.name}">
+                </option>
+            </select>
+
+            <p>Minute of the match:
+                <input type="datetime-local" th:field="*{time}" />
+            </p>
+            <br>
+            <input type="submit" value="Submit" />
+        </p>
+    </form>
+</body>
+</html>

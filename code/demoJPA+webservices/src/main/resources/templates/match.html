@@ -1,0 +1,35 @@
+<form th:action="@{/match}" th:object="${match}" method="post">
+    <div="form-row">
+    <div>
+      <label>Home Team</label>
+      <select class="form-control" th:field="*{teamA}">
+        <option th:each="team : ${allteams}"
+                th:value="${team.name}"
+                th:text="${team.name}">
+
+        </option>
+      </select>
+    </div>
+    <div>
+      <label>Away Team</label>
+      <select class="form-control" th:field="*{teamB}">
+        <option th:each="team : ${allteams}"
+                th:value="${team.name}"
+                th:text="${team.name}">
+
+        </option>
+      </select>
+    </div>
+    <div>
+      <label>Localization</label>
+      <input type="text" th:field="*{location}">
+    </div>
+
+    <div>
+      <label>Day - Hour</label>
+      <input type="datetime-local" th:field="*{datetime}">
+    </div>
+
+    <button type="submit">Create</button>
+    </div>
+</form>

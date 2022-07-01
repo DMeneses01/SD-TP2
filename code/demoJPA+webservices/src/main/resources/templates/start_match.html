@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Start of the Match</title>
+</head>
+<body>
+<h1>Start of the match</h1>
+
+<form action="#" th:action="@{/start_match}" th:object="${matchf}" method="post">
+    <div>
+        <input type="hidden" th:field="*{id}">
+    </div>
+    <div>
+        <label>Day - Hour</label>
+        <input type="datetime-local" th:field="*{time}">
+    </div>
+    <p>
+        <label>Are you sure you want to set the start of the match?</label>
+        <br>
+        <input type="submit" value="Start Match" />
+    </p>
+</form>
+</body>
+</html>
